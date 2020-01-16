@@ -1,0 +1,4 @@
+{{ $slug := urlize .Page.Title}}
+{{ $url := printf "%s%s%s" "https://api.buttercms.com/v2/posts/" $slug "?auth_token=[YOUR AUTH TOKEN HERE]"}}
+{{ $resource := getJSON $url }}
+{{ safeHTML $resource.data.body }}
