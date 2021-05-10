@@ -12,6 +12,10 @@ This is a starter project for Hugo with integration of ButterCMS. This includes 
 
    You can check on how to install Go compiler [here](https://golang.org/doc/install)
 
+## Setup
+
+You should replace YOUR_AUTH_TOKEN in go/generate.go with your auth token provided by ButterCMS.
+
 
 ## Usage
 
