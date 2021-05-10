@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"strconv"
 
@@ -51,7 +50,7 @@ func main() {
 
 		postResp, err := ButterCMS.GetPosts(params)
 		if err != nil {
-			panic(err.Error())
+			break
 		}
 
 		page += 1
@@ -65,7 +64,7 @@ func main() {
 			converter := md.NewConverter("", true, nil)
 			markdown, err := converter.ConvertString(post.Body)
 			if err != nil {
-				log.Fatal(err)
+				continue
 			}
 
 			fmt.Printf(post.FeaturedImage)
