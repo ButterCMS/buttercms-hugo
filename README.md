@@ -19,6 +19,14 @@ You should replace YOUR_AUTH_TOKEN in go/generate.go with your auth token provid
 
 ## Usage
 
+1. Run the generate script to retrieve all of the posts from ButterCMS
 ```shell
 go run go/generate.go
 ```
+
+2. Check the posts if they are loaded into HUGO by running
+```shell
+hugo serve
+```
+
+Web Server will be available at http://localhost:1313/
